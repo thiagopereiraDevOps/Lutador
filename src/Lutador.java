@@ -7,7 +7,7 @@ public class Lutador {
         System.out.println("----------------------------------");
         System.out.println("Chegou a hora de apresentar o lutador " + this.getNome());
         System.out.println("Diretamente de " + this.getNacionalidade());
-        System.out.println("Ele tem " + this.getIdade() + " anos e " + this.getAltura() "");
+        System.out.println("Ele tem " + this.getIdade() + " anos e " + this.getAltura());
         System.out.println("No momento está pesando " + this.getPeso() + "Kg");
         System.out.println("Tem " + this.getVitórias() + "vitórias");
         System.out.println("Tem " + this.getDerrotas() + "derrotas");
@@ -41,5 +41,73 @@ public class Lutador {
     }
     public String getNome() {
         return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public String getNacionalidade() {
+        return nacionalidade;
+    }
+    public void setNacionalidade() {
+        this.nacionalidade = nacionalidade;
+    }
+    public String getCategoria() {
+        return categoria;
+    }
+    public void setCategoria() {
+        if (this.peso < 52.2) {
+            this.categoria = "Inválido";
+        } else if (this.peso <= 70.3) {
+            this.categoria = "Leve";
+        } else if (this.peso <= 83.9) {
+            this.categoria = "Médio";
+        } else if (this.peso <= 120.2) {
+            this.categoria = "Pesado";
+        } else {
+            this.categoria = "Inválido";
+        }
+    }
+    public float getAltura() {
+        return altura;
+    }
+    public void setAltura(float altura) {
+        this.altura = altura;
+    }
+    public float getPeso() {
+        return peso;
+    }
+    public void setPeso(float peso) {
+        this.peso = peso;
+        this.setCategoria();
+    }
+    public int getIdade() {
+        return idade;
+    }
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public int getVitórias() {
+        return vitórias;
+    }
+
+    public void setVitórias(int vitórias) {
+        this.vitórias = vitórias;
+    }
+
+    public int getDerrotas() {
+        return derrotas;
+    }
+
+    public void setDerrotas(int derrotas) {
+        this.derrotas = derrotas;
+    }
+
+    public int getEmpates() {
+        return empates;
+    }
+
+    public void setEmpates(int empates) {
+        this.empates = empates;
     }
 }

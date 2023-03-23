@@ -9,10 +9,10 @@ public class Aula7 {
         l[5] = new Lutador("PITTER", "EUA", 1.81f, 105.7f, 30, 12, 2, 4);
 
         Luta UFC = new Luta();
-        UFC.marcaLuta(1[4], 1[5]);
+        UFC.marcarLuta(l[4], l[5]);
         System.out.println(" ");
 
-        UFC.marcaLuta(1[1], 1[5]);
+        UFC.marcarLuta(l[1], l[5]);
         UFC.lutar();
         System.out.println(" ");
     }
